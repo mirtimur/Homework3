@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     //MARK: - Сложение четырехзначного числа
     func sumOfFourDigits(_ a: Int) -> Int {
         var sum = 0
-        var a = a // ??? Why??
+        var a = a
         
         while a > 0 {
             sum += a % 10
@@ -58,7 +58,6 @@ class ViewController: UIViewController {
     }
     
     //MARK: - Циклический вызов функции
-    
     func cyclic(_ a: Int) {
         print(a)
         cyclic(2)
