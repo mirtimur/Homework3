@@ -2,6 +2,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var num: UInt8 = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -17,6 +19,8 @@ class ViewController: UIViewController {
         universal(15, 3.0)
         stringComparison("авб", "ввш")
         degreeExpansion(2, 4)
+        recursion(num)
+        //xD()
     }
     
     // MARK: - Универсальные функции
@@ -57,11 +61,16 @@ class ViewController: UIViewController {
         }
     }
     
-    //MARK: - Циклический вызов функции
-    func cyclic(_ a: Int) {
-        print(a)
-        cyclic(2)
+    //MARK: - Циклический вызов функции №1
+    func recursion(_ a: UInt8) -> UInt8 {
+        num += 100
+        return recursion(num)
     }
+    
+    //MARK: - Ломаем функцию №2 xD
+//    func xD() {
+//        fatalError()
+//    }
     
     //MARK: - Функция возведения в степень
     func degreeExpansion(_ a: Decimal, _ b: Int) {
